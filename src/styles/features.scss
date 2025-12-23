@@ -1,0 +1,44 @@
+@use "./variables" as *;
+
+.features {
+    padding: 2rem 25rem 2.03rem 25.0625rem;
+    background-color: $background-green;
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 39.94rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .features {
+    padding: 0;
+
+    &__flex {
+        justify-content: space-evenly;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+    }
+        &__item {
+        width: 10rem;
+        height: 10rem;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+
+            &:nth-of-type(2),
+            &:nth-of-type(4) {
+                display: none;
+            }
+
+
+                            
+        }
+    }
+
+}

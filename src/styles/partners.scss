@@ -1,0 +1,40 @@
+@use "./variables" as *;
+
+.partners {
+    padding: 1.1875rem 23.875rem;
+    background-color: $background-green;
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 44.75rem;
+    }
+
+    &__item {
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1); 
+        }
+    }
+}    
+
+@media (max-width: 1024px) {
+    .partners {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+
+        &__flex {
+            justify-content: center;
+            gap: 1rem;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .partners__flex {
+        flex-direction: column;
+    }
+}
